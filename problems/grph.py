@@ -1,3 +1,5 @@
+import time
+start = time.time()
 def solve(suff,pref):
     orderedpair = []
     for keys,values in suff.items():
@@ -34,3 +36,5 @@ if __name__ == "__main__":
     for i in orderedpair:    
         print(*i)
         file.write(" ".join(i)+"\n")
+end = time.time()
+print(end-start)
