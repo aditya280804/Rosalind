@@ -4,3 +4,5 @@ if __name__ == "__main__":
     print((i[0]+i[1]+i[2])*2+(i[3]*3)/2+i[4])
     with open("output/rosalind_iev.txt","w")as file:
         file.write(f"{(i[0]+i[1]+i[2])*2+(i[3]*3)/2+i[4]}")
+        #Any couple with a homozygous dominant allele will produce both offsprings with a dominant allele and others can be calculated from Punnet squares
+        
