@@ -1,11 +1,10 @@
+def read_fasta(path):
+    with open(path) as f:
+        return ''.join(line.strip() for line in f if not line.startswith('>'))
+
 import math
 if __name__ == "__main__":
-    seq = ""
-    with open("datasets/rosalind_pmch.txt","r") as f:
-        for line in f:
-            if line.startswith(">"):
-                continue
-            seq += line.strip()
+    seq = read_fasta("datasets/rosalind_pmch.txt")
     na = seq.count("A")
     ng = seq.count("G")
     nmatchings = (math.factorial(na)*math.factorial(ng))
